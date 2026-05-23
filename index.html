@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EULONIX Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>EULONIX</h1>
+      <p>Admin Dashboard</p>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h2>Manage Portfolio Projects</h2>
+      </div>
+
+      <section class="form-section">
+        <form id="projectForm">
+          <input type="text" id="title" placeholder="Project Title" required />
+
+          <select id="category" required>
+            <option value="">Select Category</option>
+            <option>Business</option>
+            <option>E-Commerce</option>
+            <option>Corporate</option>
+            <option>Portfolio</option>
+            <option>Restaurant</option>
+            <option>Real Estate</option>
+          </select>
+
+          <textarea id="description" placeholder="Project Description" required></textarea>
+
+          <input type="url" id="link" placeholder="Live Website URL" required />
+
+          <input type="file" id="image" accept="image/*" required />
+
+          <button type="submit">Add Project</button>
+        </form>
+      </section>
+
+      <section class="projects-section">
+        <h3>Projects</h3>
+        <div id="projectsContainer" class="projects-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
