@@ -47,7 +47,7 @@ form.addEventListener('submit', async (e) => {
   const title = document.getElementById('title').value;
   const category = document.getElementById('category').value;
   const description = document.getElementById('description').value;
-  const link = document.getElementById('link').value;
+  const link = document.getElementById('live_url').value;
   const imageFile = document.getElementById('image').files[0];
 
   const fileName = `${Date.now()}-${imageFile.name}`;
@@ -75,7 +75,7 @@ form.addEventListener('submit', async (e) => {
         title,
         category,
         description,
-        link,
+        live_url,
         image_url
       }
     ]);
